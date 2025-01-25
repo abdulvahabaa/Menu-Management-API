@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon",
     "devBuild": "cls && npx tsc --project tsconfig.dev.json && node dist/server.js",
     "dev": "nodemon --verbose --config nodemon.json --exec \"npm run devBuild\""
   },
