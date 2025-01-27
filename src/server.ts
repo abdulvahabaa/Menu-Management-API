@@ -8,18 +8,14 @@ dotenv.config();
 
 const app: Express = express();
 
-const corsOptions = {
-  origin: "http://localhost:9000",
-  methods: ["GET", "POST", "PUT", "PATCH", "OPTIONS"],
-};
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
-app.use(cors(corsOptions));
+app.use(cors());
 
-app.use("/api/v1/menus", menusRoutes);
+app.use("/menus", menusRoutes);
 
 app.use((req, res, next) => {
   res.status(404).json({ message: "Route not Found" });
