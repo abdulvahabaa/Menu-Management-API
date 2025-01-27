@@ -2,16 +2,24 @@
 
 This API allows users to manage menus and menu items. It supports CRUD operations for menus and menu items.
 
+ <div>
+    <img src="https://img.shields.io/badge/-Node JS-black?style=for-the-badge&logoColor=white&logo=Node.js&color=green" alt="Node.js" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=TypeScript&color=blue" alt="Typescript" />
+    <img src="https://img.shields.io/badge/-Mongodb-black?style=for-the-badge&logoColor=white&logo=Mongodb&color=darkgreen" alt="Mongodb" />
+    <img src="https://img.shields.io/badge/-Prisma-black?style=for-the-badge&logoColor=black&logo=Prisma&color=grey" alt="tailwindcss" />
+  </div>
+
 ---
-## Table of Contents
+
+## 📋 Table of Contents
 
 - [Menu Management API](#menu-management-api)
-  - [Table of Contents](#table-of-contents)
-  - [Technologies Used](#technologies-used)
-  - [Project Setup](#project-setup)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [⚙️ Technologies Used](#️-technologies-used)
+  - [🔧 Project Setup](#-project-setup)
     - [Prerequisites](#prerequisites)
-    - [Installation Steps](#installation-steps)
-  - [API Endpoints](#api-endpoints)
+    - [🚀 Installation Steps](#-installation-steps)
+  - [📚 API Endpoints](#-api-endpoints)
     - [Menu Endpoints](#menu-endpoints)
       - [1. Create a Menu](#1-create-a-menu)
       - [2. Get All Menus](#2-get-all-menus)
@@ -22,18 +30,19 @@ This API allows users to manage menus and menu items. It supports CRUD operation
       - [1. Add a Menu Item](#1-add-a-menu-item)
       - [2. Update a Menu Item](#2-update-a-menu-item)
       - [3. Delete a Menu Item](#3-delete-a-menu-item)
-  - [Database Schema](#database-schema)
+  - [📊 Database Schema](#-database-schema)
     - [Menu](#menu)
     - [MenuItem](#menuitem)
-  - [Sample `.env` File](#sample-env-file)
-  - [Run the Project](#run-the-project)
+  - [🛠️ Sample .env File](#️-sample-env-file)
+
+## ⚙️ Technologies Used
+
+- Backend: **Node.js**, **Express.js**, **TypeScript**
+- Database: **MongoDB**, **Prisma ORM**
 
 ---
-## Technologies Used
-- Backend: Node.js, Express.js, TypeScript
-- Database: Mongodb, Prisma ORM
-  
-## Project Setup
+
+## 🔧 Project Setup
 
 ### Prerequisites
 
@@ -42,15 +51,17 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 
 ---
 
-### Installation Steps
+### 🚀 Installation Steps
 
 1. **Clone the Repository**:
+
    ```bash
    git clone <repository-url>
    cd <repository-folder>
    ```
 
 2. **Install Dependencies**:
+
    ```bash
    npm install
    ```
@@ -60,13 +71,13 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 
    ```plaintext
    DATABASE_URL="mongodb+srv://<username>:<password>@<cluster>/<database>?retryWrites=true&w=majority"
-   
    PORT=3000
    ```
 
    Replace `<username>`, `<password>`, `<cluster>`, and `<database>` with your MongoDB details.
 
 4. **Start the Server**:
+
    ```bash
    npm run dev
    ```
@@ -75,14 +86,16 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 
 ---
 
-## API Endpoints
+## 📚 API Endpoints
 
 ### Menu Endpoints
 
 #### 1. Create a Menu
+
 **POST** `http://localhost:3000/menus`
 
 **Request Body**:
+
 ```json
 {
   "menuName": "string",
@@ -91,20 +104,23 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 ```
 
 **Response**:
+
 ```json
 {
   "id": "string",
   "menuName": "string",
-  "description": "string",
+  "description": "string"
 }
 ```
 
 ---
 
 #### 2. Get All Menus
+
 **GET** `http://localhost:3000/menus`
 
 **Response**:
+
 ```json
 [
   {
@@ -126,9 +142,11 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 ---
 
 #### 3. Get a Menu by ID
+
 **GET** `http://localhost:3000/menus/:menuId`
 
 **Response**:
+
 ```json
 {
   "id": "string",
@@ -148,9 +166,11 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 ---
 
 #### 4. Update a Menu
+
 **PATCH** `http://localhost:3000/menus/:menuId`
 
 **Request Body**:
+
 ```json
 {
   "menuName": "string",
@@ -159,20 +179,23 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 ```
 
 **Response**:
+
 ```json
 {
   "id": "string",
   "menuName": "string",
-  "description": "string",
+  "description": "string"
 }
 ```
 
 ---
 
 #### 5. Delete a Menu
+
 **DELETE** `http://localhost:3000/menus/:menuId`
 
 **Response**:
+
 ```json
 {
   "message": "Menu deleted successfully."
@@ -184,9 +207,11 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 ### Menu Item Endpoints
 
 #### 1. Add a Menu Item
+
 **POST** `http://localhost:3000/menus/:menuId/items`
 
 **Request Body**:
+
 ```json
 {
   "itemName": "string",
@@ -196,6 +221,7 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 ```
 
 **Response**:
+
 ```json
 {
   "id": "string",
@@ -209,9 +235,11 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 ---
 
 #### 2. Update a Menu Item
+
 **PATCH** `http://localhost:3000/menus/:menuId/items/:itemId`
 
 **Request Body**:
+
 ```json
 {
   "itemName": "string",
@@ -221,6 +249,7 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 ```
 
 **Response**:
+
 ```json
 {
   "id": "string",
@@ -234,9 +263,11 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 ---
 
 #### 3. Delete a Menu Item
+
 **DELETE** `http://localhost:3000/menus/:menuId/items/:itemId`
 
 **Response**:
+
 ```json
 {
   "message": "Menu item deleted successfully."
@@ -245,30 +276,30 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 
 ---
 
-## Database Schema
+## 📊 Database Schema
 
 ### Menu
-| Field         | Type      |
-|---------------|-----------|
-| `id`          | ObjectId  |
-| `menuName`    | String    | 
-| `description` | String    |
 
-
-
+| Field         | Type     |
+| ------------- | -------- |
+| `id`          | ObjectId |
+| `menuName`    | String   |
+| `description` | String   |
 
 ### MenuItem
-| Field         | Type      |
-|---------------|-----------|
-| `id`          | ObjectId  |
-| `menuId`      | ObjectId  |
-| `itemName`    | String    | 
-| `description` | String    |
-| `price`       | Int       |    
+
+| Field         | Type     |
+| ------------- | -------- |
+| `id`          | ObjectId |
+| `menuId`      | ObjectId |
+| `itemName`    | String   |
+| `description` | String   |
+| `price`       | Int      |
 
 ---
 
-## Sample `.env` File
+## 🛠️ Sample .env File
+
 ```plaintext
 DATABASE_URL="mongodb+srv://<username>:<password>@<cluster>/<database>?retryWrites=true&w=majority"
 PORT=3000
@@ -277,17 +308,6 @@ PORT=3000
 Replace `<username>`, `<password>`, `<cluster>`, and `<database>` with your MongoDB connection details.
 
 ---
-
-## Run the Project
-
-1. Start the server in development mode:
-   ```bash
-   npm run dev
-   ```
-
-2. Access the API at `http://localhost:3000`.
-
-
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=footer"/>
