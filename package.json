@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "cls && npx tsc --project tsconfig.dev.json && npx prisma generate && node dist/server.js",
+    "postinstall": "prisma generate",
+    "start": "nodemon dist/server.js",
     "devBuild": "cls && npx tsc --project tsconfig.dev.json && node dist/server.js",
     "dev": "nodemon --verbose --config nodemon.json --exec \"npm run devBuild\""
   },
