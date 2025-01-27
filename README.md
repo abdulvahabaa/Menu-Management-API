@@ -16,6 +16,7 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 - [Menu Management API](#menu-management-api)
   - [📋 Table of Contents](#-table-of-contents)
   - [⚙️ Technologies Used](#️-technologies-used)
+  - [🌐 Live API](#-live-api)
   - [🔧 Project Setup](#-project-setup)
     - [Prerequisites](#prerequisites)
     - [🚀 Installation Steps](#-installation-steps)
@@ -41,7 +42,11 @@ This API allows users to manage menus and menu items. It supports CRUD operation
 - Database: **MongoDB**, **Prisma ORM**
 
 ---
+## 🌐 Live API
 
+You can access the live API at [https://menu-management-api-eight.vercel.app/menus](https://menu-management-api-eight.vercel.app/menus).
+
+---
 ## 🔧 Project Setup
 
 ### Prerequisites
@@ -85,6 +90,7 @@ This API allows users to manage menus and menu items. It supports CRUD operation
    The server will run on `http://localhost:3000`.
 
 ---
+
 
 ## 📚 API Endpoints
 
